@@ -51,7 +51,6 @@
         &_active::before {
             position: absolute;
             content: "";
-            background-image: url(./../img/Ellipse.svg);
             background-position: center;
             background-repeat: no-repeat;
             background-size: 0.3rem;
@@ -61,6 +60,8 @@
             bottom: -0.1rem;
             left: 0rem;
             right: 0rem;
+            background: #666972;
+            border-radius: 50%;
         }
 
     }
