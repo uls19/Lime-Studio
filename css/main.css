@@ -91,6 +91,11 @@ legend {
 html {
   font-size: 0.8333333333vw;
 } /* 100vw / 1728 */
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 4vw;
+  }
+}
 html, body {
   font-family: "Idealist Sans", sans-serif;
 }
@@ -128,6 +133,10 @@ html, body {
 }
 .hide {
   opacity: 0;
+}
+
+.none {
+  display: none;
 }
 
 .header {
@@ -332,17 +341,26 @@ html, body {
   height: 1.5rem;
 }
 
+.header__btn-up {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 1.75rem;
+  height: 1.125rem;
+  margin-left: 1.6rem;
+}
+
+.header__btn-line {
+  height: 1px;
+  border-radius: 1px;
+  background: #8c8580;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
 }
 
-@media screen and (max-width: 767px) {
-  .swiper {
-    width: 32%;
-    height: 100%;
-  }
-}
 .container {
   padding-left: 4.4rem;
   padding-right: 4.4rem;
@@ -384,14 +402,6 @@ html, body {
   height: 10.61rem;
   background-color: rgba(0, 0, 0, 0.3);
 }
-@media screen and (max-width: 767px) {
-  .header__info-item1:hover .header__info-up,
-  .header__info-item2:hover .header__info-up,
-  .header__info-item3:hover .header__info-up {
-    height: 4.81rem;
-    background-color: rgba(0, 0, 0, 0);
-  }
-}
 .header__info-item1:hover .header__info-text,
 .header__info-item2:hover .header__info-text,
 .header__info-item3:hover .header__info-text {
@@ -403,7 +413,7 @@ html, body {
   background-image: url(./../img/image1.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 32rem 44.56rem;
+  background-size: cover;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
@@ -412,7 +422,7 @@ html, body {
   background: url(./../img/image2.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 32rem 44.56rem;
+  background-size: cover;
 }
 
 .header__info-item3 {
@@ -420,7 +430,7 @@ html, body {
   background: url(./../img/image3.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 32rem 44.56rem;
+  background-size: cover;
 }
 
 .header__info-up {
@@ -465,8 +475,81 @@ html, body {
 }
 
 @media screen and (max-width: 767px) {
+  .header {
+    width: 24.56rem;
+    height: 3.75rem;
+  }
+  .header__top {
+    padding: 0.81rem 0.875rem;
+    height: 3.75rem;
+    align-items: center;
+  }
+  .nav,
+  .header__left-box,
+  .text-logo {
+    display: none;
+  }
+  .header__title {
+    width: auto;
+    height: auto;
+    margin-left: 0;
+  }
+  .link__text-logo {
+    font-size: 1.75rem;
+  }
+  .header__left-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: auto;
+    height: auto;
+    column-gap: 0.3rem;
+  }
+  .link__social {
+    padding: 0.3rem 0;
+  }
+  .header__btn-up {
+    display: flex;
+  }
+  .container {
+    padding-left: 0.875rem;
+    padding-right: 0.875rem;
+  }
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+  .header__info {
+    margin-top: 1.1rem;
+  }
+  .header__info-item1,
+  .header__info-item2,
+  .header__info-item3 {
+    height: 31.5rem;
+  }
+  .header__info-item1:hover .header__info-up,
+  .header__info-item2:hover .header__info-up,
+  .header__info-item3:hover .header__info-up {
+    height: 4.81rem;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .header__info-item1:hover .header__info-text,
+  .header__info-item2:hover .header__info-text,
+  .header__info-item3:hover .header__info-text {
+    opacity: 0;
+  }
+  .header__info-up {
+    padding-top: 1.6rem;
+    padding-left: 1.2rem;
+  }
+  .header__info-title {
+    font-size: 1.25rem;
+  }
   .header__info-line {
     display: none;
+  }
+  .header__info-pagination {
+    margin: 1.57rem auto;
   }
 }
 .main {

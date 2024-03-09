@@ -3,7 +3,9 @@
 @import url(./../fonts/Raleway/stylesheet.css);
 
 html {font-size: calc(1vw / 1.2)}   /* 100vw / 1728 */
-
+@include Mobile {
+  html {font-size: calc(1vw / 0.25)} 
+}
  html, body {
     font-family: $font-family;
 }
@@ -43,4 +45,8 @@ html {font-size: calc(1vw / 1.2)}   /* 100vw / 1728 */
 
 .hide {
   opacity: 0;
+}
+
+.none {
+  display: none;
 }
